@@ -5,7 +5,8 @@ import bcrypt
 
 app = Flask(__name__)
 app.secret_key = "testing"
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+# client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient('mongodb+srv://root:root@cluster0.4g04r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 db = client.get_database('ssd')
 records = db.login_credentials
 
